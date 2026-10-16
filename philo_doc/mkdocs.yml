@@ -1,0 +1,88 @@
+site_name: "Codexion (philo problem)"
+# site_url: https://ahmadal-quraan.github.io/Inception/
+docs_dir: docs/    # Obsidian vault
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  
+  # Color Palette & Auto-Switching
+  palette:
+    # Dark Mode (Default)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: dark blue
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+  # Layout & UI Features
+  features:
+    - navigation.instant        # Speed up page transitions
+    - navigation.tracking       # Auto-update URL based on active section
+    - navigation.tabs           # Header tab navigation
+    - navigation.top            # "Back to top" button
+    - navigation.expand         # Expand collapsible navigation items
+    - search.suggest            # Interactive search suggestions
+    - search.highlight          # Highlight search terms on target page
+    - content.code.copy         # Add copy button to code blocks
+
+  # Typography
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search
+  - obsidian-bridge:   # pip install mkdocs-obsidian-bridge
+      obsidian_callouts: true
+
+# Navigation Structure (Optional - customize or remove to auto-build from folder)
+nav:
+  - Overview: index.md
+  - Concurrency Concepts & Problems:
+    - Core concurrency & Multithreading problems: concepts/problems.md
+    - Deadlock & Starvation: concepts/deadlock.md
+    - Scheduling (FIFO & EDF): concepts/scheduling.md
+  - Architecture:
+    - Threads & Mutexes: architecture/threads.md
+    - Priority Queue: architecture/priority-queue.md
+  - Testing & Debugging: testing.md
+
+# Tells MkDocs where to look for your images
+extra:
+  obsidian_attachments_dir: docs/pic/ # Obsidian attachments folder name
+
+markdown_extensions:
+  # Standard Admonitions & Collapsibles
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  # Code Highlighting & Formatting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+  # Visual Enhancements
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
