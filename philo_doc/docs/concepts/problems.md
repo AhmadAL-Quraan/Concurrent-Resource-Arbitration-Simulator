@@ -17,7 +17,9 @@ Some of these concept maybe unrelated directly to Codexion, but they are good to
 1) **Mutual exclusion (Mutex)**: Any resources must be held by exactly one process at a time, this can avoid **race condition**.
 
 2) **Hold and wait**: A process must hold a resource while waiting for other resources held by other processes.
-3) **No-preemption**: A concept says that a process can't take a resource from another process while it didn't finish it's task
+
+3) **No-preemption**: A concept says that a process can't take a resource from another process while it didn't finish it's task.
+
 4) **Circular wait**: Set of process waiting for resources that are being held by the next one.
 
 
@@ -42,13 +44,5 @@ p2.sleep = random = 4 millisecon
 
 
 
-
-
-
-
-
-
-
-
-
+## **Race condition**
 

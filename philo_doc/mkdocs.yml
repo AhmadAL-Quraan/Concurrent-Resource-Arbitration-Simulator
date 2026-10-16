@@ -53,12 +53,6 @@ nav:
   - Overview: index.md
   - Concurrency Concepts & Problems:
     - Core concurrency & Multithreading problems: concepts/problems.md
-    - Deadlock & Starvation: concepts/deadlock.md
-    - Scheduling (FIFO & EDF): concepts/scheduling.md
-  - Architecture:
-    - Threads & Mutexes: architecture/threads.md
-    - Priority Queue: architecture/priority-queue.md
-  - Testing & Debugging: testing.md
 
 # Tells MkDocs where to look for your images
 extra:
