@@ -241,45 +241,6 @@
   
 
       
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../architecture/threads.md" class="md-tabs__link">
-          
-  
-  
-  Architecture
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../testing.md" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Testing & Debugging
-
-      </a>
-    </li>
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -495,6 +456,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Race condition
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -504,207 +476,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deadlock.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deadlock & Starvation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scheduling.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scheduling (FIFO & EDF)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Architecture
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Architecture
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../architecture/threads.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Threads & Mutexes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../architecture/priority-queue.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Priority Queue
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../testing.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Testing & Debugging
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -772,6 +546,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Race condition
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -802,9 +587,9 @@
 <p><img alt="" src="../../assets/dead_lock.png" /></p>
 <h3 id="main-conditions-for-a-dead-lock-to-happen-mhnc">Main conditions for a dead lock to happen (MHNC)</h3>
 <p>1) <strong>Mutual exclusion (Mutex)</strong>: Any resources must be held by exactly one process at a time, this can avoid <strong>race condition</strong>.</p>
-<p>2) <strong>Hold and wait</strong>: A process must hold a resource while waiting for other resources held by other processes.
-3) <strong>No-preemption</strong>: A concept says that a process can't take a resource from another process while it didn't finish it's task
-4) <strong>Circular wait</strong>: Set of process waiting for resources that are being held by the next one.</p>
+<p>2) <strong>Hold and wait</strong>: A process must hold a resource while waiting for other resources held by other processes.</p>
+<p>3) <strong>No-preemption</strong>: A concept says that a process can't take a resource from another process while it didn't finish it's task.</p>
+<p>4) <strong>Circular wait</strong>: Set of process waiting for resources that are being held by the next one.</p>
 <h2 id="2-live-lock"><strong>2) Live-lock</strong></h2>
 <ul>
 <li>Two or more <strong>concurrent processes continuously change their states</strong> in response to the actions of the other processes, preventing any of them from making actual progress.</li>
@@ -816,6 +601,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>p1.sleep = random = 2 millisecond
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>p2.sleep = random = 4 millisecon
 </span></code></pre></div>
+<h2 id="race-condition"><strong>Race condition</strong></h2>
 
 
 
